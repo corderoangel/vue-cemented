@@ -5,6 +5,7 @@ import NewComponent from "./NewComponent.vue";
 import Directives from "./Directives.vue";
 import { useCounterStore } from "../store";
 import Boton from "./BotonHijo.vue";
+import UserList from "./UserList.vue";
 
 // ?
 defineProps({
@@ -37,6 +38,7 @@ const counter = useCounterStore();
 		<p>Contador: {{ counter.count }}</p>
 		<button @click="counter.increment">Incrementar</button>
 	</div>
+	<UserList />
 </template>
 
 <!-- define los estilos -->
