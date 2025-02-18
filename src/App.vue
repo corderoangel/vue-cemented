@@ -1,5 +1,19 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
+import Hijo from "./components/Hijo.vue";
+import Hijo2 from "./components/Hijo2.vue";
+import Hermano1 from "./components/Hermano1.vue";
+import Hermano2 from "./components/Hermano2.vue";
+import { ref } from "vue";
+
+const nombrePadre = ref("Carlos");
+const mensaje = ref("");
+
+const recibirMensaje = (msg) => {
+	mensaje.value = msg;
+};
+
+const mensaje2 = ref("Texto inicial");
 </script>
 
 <template>
@@ -17,6 +31,14 @@ import HelloWorld from "./components/HelloWorld.vue";
 		</a>
 	</div>
 	<HelloWorld msg="Vite + Vue" />
+	<Hijo :nombre="nombrePadre" @mensajeEnviado="recibirMensaje" />
+	<p>Mensaje recibido: {{ mensaje }}</p>
+
+	<Hijo2 v-model="mensaje" />
+	<p>Mensaje2: {{ mensaje2 }}</p>
+
+	<Hermano1 />
+	<Hermano2 />
 </template>
 
 <style scoped>
@@ -33,3 +55,12 @@ import HelloWorld from "./components/HelloWorld.vue";
 	filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
+
+<!-- 
+:nombre="nombrePadre" → Enlaza la prop del padre con el hijo.
+
+@mensajeEnviado="recibirMensaje" → Captura el evento desde el hijo.
+recibirMensaje(msg) { mensaje.value = msg; } → Actualiza el estado del padre.
+
+v-model="mensaje" → Enlaza la variable del padre con el input del hijo.
+-->

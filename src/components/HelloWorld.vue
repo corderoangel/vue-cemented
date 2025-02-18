@@ -3,7 +3,7 @@
 import { ref } from "vue";
 import NewComponent from "./NewComponent.vue";
 import Directives from "./Directives.vue";
-import { useCounterStore } from "../store";
+import { useStore } from "../store";
 import Boton from "./BotonHijo.vue";
 import UserList from "./UserList.vue";
 
@@ -20,7 +20,7 @@ const count = ref(0);
 const mensaje = ref("");
 
 // ?
-const counter = useCounterStore();
+const counter = useStore();
 </script>
 
 <!-- define el html -->
