@@ -1,9 +1,9 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import Hijo from "./components/Hijo.vue";
-import Hijo2 from "./components/Hijo2.vue";
-import Hermano1 from "./components/Hermano1.vue";
-import Hermano2 from "./components/Hermano2.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+// import Hijo from "./components/Hijo.vue";
+// import Hijo2 from "./components/Hijo2.vue";
+// import Hermano1 from "./components/Hermano1.vue";
+// import Hermano2 from "./components/Hermano2.vue";
 import { ref } from "vue";
 
 const nombrePadre = ref("Carlos");
@@ -16,7 +16,7 @@ const recibirMensaje = (msg) => {
 const mensaje2 = ref("Texto inicial");
 </script>
 
-<template>
+<!-- <template>
 	<nav>
 		<router-link to="/">Inicio</router-link>
 		<router-link to="/about">Acerca de</router-link>
@@ -39,9 +39,21 @@ const mensaje2 = ref("Texto inicial");
 
 	<Hermano1 />
 	<Hermano2 />
+</template> -->
+<template>
+	<div class="min-h-screen flex flex-col">
+		<nav class="bg-blue-500 text-white p-4 w-full flex justify-center gap-4">
+			<router-link to="/" class="hover:underline">Inicio</router-link>
+			<router-link to="/about" class="hover:underline">Acerca de</router-link>
+		</nav>
+
+		<div class="p-6">
+			<router-view></router-view>
+		</div>
+	</div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 .logo {
 	height: 6em;
 	padding: 1.5em;
@@ -54,7 +66,7 @@ const mensaje2 = ref("Texto inicial");
 .logo.vue:hover {
 	filter: drop-shadow(0 0 2em #42b883aa);
 }
-</style>
+</style> -->
 
 <!-- 
 :nombre="nombrePadre" → Enlaza la prop del padre con el hijo.
