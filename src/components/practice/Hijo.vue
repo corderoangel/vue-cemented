@@ -1,19 +1,19 @@
 <template>
-	<div>
-		<h2>Hola, mi nombre es {{ nombre }}</h2>
-	</div>
-	<button @click="enviarMensaje">Enviar mensaje al padre</button>
+  <div>
+    <h2>Hola, mi nombre es {{ nombre }}</h2>
+  </div>
+  <button @click="enviarMensaje">Enviar mensaje al padre</button>
 </template>
 
 <script setup>
 defineProps({
-	nombre: String,
+  nombre: String,
 });
 
-const emit = defineEmits(["mensajeEnviado"]); // Define el evento
+const emit = defineEmits(['mensajeEnviado']); // Define el evento
 
 const enviarMensaje = () => {
-	emit("mensajeEnviado", "Hola desde el hijo!");
+  emit('mensajeEnviado', 'Hola desde el hijo!');
 };
 </script>
 <!-- 

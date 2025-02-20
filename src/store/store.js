@@ -25,7 +25,6 @@ export const useTaskStore = defineStore('task', () => {
         title: task.title,
         completed: task.completed,
       }));
-      console.log(tasks.value);
     } catch (error) {
       console.error('Error getting tasks ' + error);
     }

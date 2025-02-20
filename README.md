@@ -1,7 +1,11 @@
 ## router
 
+## reactive state
+
 ## state with pinia
 
 ## directives
 
-## comutication
+## comunication
+
+## props

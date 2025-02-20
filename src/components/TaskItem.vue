@@ -4,7 +4,7 @@ import { useTaskStore } from '../store/store';
 const taskStore = useTaskStore();
 </script>
 <template>
-  <ul>
+  <ul v-if="taskStore.tasks.length > 0">
     <li
       v-for="task in taskStore.tasks"
       :key="task.id"
@@ -20,17 +20,18 @@ const taskStore = useTaskStore();
       <div class="flex gap-2">
         <button
           @click="taskStore.toggleTask(task.id)"
-          class="text-green-500 hover:text-green-600"
+          class="text-green-500 hover:text-green-600 cursor-pointer"
         >
           ✅
         </button>
         <button
           @click="taskStore.removeTask(task.id)"
-          class="text-red-500 hover:text-red-600"
+          class="text-red-500 hover:text-red-600 cursor-pointer"
         >
           ❌
         </button>
       </div>
     </li>
   </ul>
+  <p v-else>Error al cargar la api</p>
 </template>
