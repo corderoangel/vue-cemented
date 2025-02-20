@@ -5,6 +5,7 @@
 // import Hermano1 from "./components/Hermano1.vue";
 // import Hermano2 from "./components/Hermano2.vue";
 import { ref } from 'vue';
+import NavBar from './components/NavBar.vue';
 
 const nombrePadre = ref('Carlos');
 const mensaje = ref('');
@@ -42,12 +43,8 @@ const mensaje2 = ref('Texto inicial');
 </template> -->
 <template>
   <div class="min-h-screen flex flex-col">
-    <nav class="bg-blue-500 text-white p-4 w-full flex justify-center gap-4">
-      <router-link to="/" class="hover:underline">Inicio</router-link>
-      <router-link to="/about" class="hover:underline">Acerca de</router-link>
-    </nav>
-
-    <div class="p-6">
+    <div>
+      <NavBar />
       <router-view></router-view>
     </div>
   </div>

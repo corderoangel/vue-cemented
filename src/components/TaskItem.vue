@@ -8,10 +8,10 @@ const taskStore = useTaskStore();
     <li
       v-for="task in taskStore.tasks"
       :key="task.id"
-      class="flex justify-between items-center p-3 border-b bg-gray-100 rounded mb-2"
+      class="flex justify-between items-center p-3 bg-gray-500 rounded mb-2"
     >
       <span
-        :class="{ 'line-through text-gray-500': task.completed }"
+        :class="{ 'line-through text-gray-900': task.completed }"
         class="flex-1"
       >
         {{ task.title }}
