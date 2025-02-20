@@ -15,7 +15,9 @@ const addTask = () => {
 
 <template>
 	<div class="max-w-md mx-auto mt-4">
-		<input v-model="newTask" type="text" placeholder="Nueva tarea" class="border p-2 rounded w-full" />
-		<button @click="addTask" class="bg-blue-500 text-white p-2 rounded mt-2 w-full">Agregar</button>
+		<div class="flex gap-2">
+			<input v-model="newTask" type="text" placeholder="Nueva tarea..." class="border p-2 rounded flex-1" />
+			<button @click="addTask" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">➕ Agregar</button>
+		</div>
 	</div>
 </template>
