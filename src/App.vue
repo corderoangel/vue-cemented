@@ -4,16 +4,16 @@
 // import Hijo2 from "./components/Hijo2.vue";
 // import Hermano1 from "./components/Hermano1.vue";
 // import Hermano2 from "./components/Hermano2.vue";
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const nombrePadre = ref("Carlos");
-const mensaje = ref("");
+const nombrePadre = ref('Carlos');
+const mensaje = ref('');
 
 const recibirMensaje = (msg) => {
-	mensaje.value = msg;
+  mensaje.value = msg;
 };
 
-const mensaje2 = ref("Texto inicial");
+const mensaje2 = ref('Texto inicial');
 </script>
 
 <!-- <template>
@@ -41,16 +41,16 @@ const mensaje2 = ref("Texto inicial");
 	<Hermano2 />
 </template> -->
 <template>
-	<div class="min-h-screen flex flex-col">
-		<nav class="bg-blue-500 text-white p-4 w-full flex justify-center gap-4">
-			<router-link to="/" class="hover:underline">Inicio</router-link>
-			<router-link to="/about" class="hover:underline">Acerca de</router-link>
-		</nav>
+  <div class="min-h-screen flex flex-col">
+    <nav class="bg-blue-500 text-white p-4 w-full flex justify-center gap-4">
+      <router-link to="/" class="hover:underline">Inicio</router-link>
+      <router-link to="/about" class="hover:underline">Acerca de</router-link>
+    </nav>
 
-		<div class="p-6">
-			<router-view></router-view>
-		</div>
-	</div>
+    <div class="p-6">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <!-- <style scoped>
