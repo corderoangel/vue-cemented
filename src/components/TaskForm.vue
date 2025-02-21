@@ -24,7 +24,7 @@ const addTask = () => {
       />
       <button
         @click="addTask"
-        class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+        class="bg-gray-800 text-white p-2 rounded cursor-pointer hover:bg-gray-600"
       >
         ➕ Agregar
       </button>
